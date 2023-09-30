@@ -1,1 +1,1 @@
-## CNN Classfier Project
+## CNN Classfication Project

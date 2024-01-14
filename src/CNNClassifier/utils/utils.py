@@ -16,8 +16,18 @@ def read_yaml(path_to_yaml:Path)-> ConfigBox:
         return ConfigBox(content)
 
 @ensure_annotations
-def save_json():
-    pass
+def save_json(path:Path, data:dict):
+    filedir,filename=os.path.split(path)
+
+    if filedir !="":
+        os.makedirs(filedir,exist_ok=True)
+    else:
+        pass
+
+    # Convert and write JSON object to file
+    with open(path, "w") as outfile: 
+        json.dump(data, outfile)
+    
 
 @ensure_annotations
 def load_json():

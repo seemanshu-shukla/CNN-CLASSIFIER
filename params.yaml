@@ -1,10 +1,10 @@
 # Here i will define the parameters of models
 
-AUGMENTATION: True
+AUGMENTATION: True  #Where to perform data augumentation or not in case of imbalanced dataset
 IMAGE_SIZE: [224, 224, 3] # as per VGG 16 model
-BATCH_SIZE: 16
-INCLUDE_TOP: False
+BATCH_SIZE: 16  #Number of images to be considered at time during training and inferening/prediction
+INCLUDE_TOP: False #Whether to included the ANN part in the CNN model or not
 EPOCHS: 1
-CLASSES: 2
-WEIGHTS: imagenet
+CLASSES: 2 #Binary classification that why 2
+WEIGHTS: imagenet #per trained models are trained on top of some dataset. Imagenet is such a widely used image based dataset. So through WEIGHTS: imagenet we will be passing the pre trained model weights obtained when training the model(VGG16) using imagenet dataset
 LEARNING_RATE: 0.01
